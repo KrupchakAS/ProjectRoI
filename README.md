@@ -29,6 +29,7 @@ git clone https://github.com/KrupchakAS/ProjectRoI.git
 4. Создать и запустить приложение с использование Maven из корневой директории приложения
 
 а)mvn package
+
 б)java -jar target/ProjectRoI.jar
 
 Альтернативный запуск -
