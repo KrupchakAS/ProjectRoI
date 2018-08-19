@@ -8,7 +8,7 @@ Spring Boot REST API
 Требования
 Java - 1.8.x
 Maven - 3.x.x
-Mysql - 5.x.x
+Mysql - 5.x.x(или другая база данных)
 
 Шаги по запуску приложения:
 
@@ -18,25 +18,34 @@ git clone https://github.com/KrupchakAS/ProjectRoI.git
 
 2. Создать и настроить mysql подлючение username and password согласно вашей установке запуска сервера базы данных.
 
-Открыть src/main/resources/application.properties.
+Открыть src/main/resources/application.properties
 
-Изменить spring.datasource.username и spring.datasource.password согласно вашей установке запуска сервера базы данных.
+Изменить настройки согласно вашей установке запуска сервера базы данных.
+а)spring.datasource.username 
+б)spring.datasource.password 
+(и другие настройки если вы используете иную базу данных)
 
 3. Создание Mysql database.
 
-Запустить src/main/resources/database.sql.
+а)Запустить MySql сервер.
+б)Запустить MySQL Command Line Client и ввести ваш пароль от root пользователя для доступа в базе данных
+в)create database roi;
+г)use roi;
+д)source C:\Users\andrey\Desktop\ProjectRoI\src\main\resources\database.sql (ввести путь к локальному расположения файла database.sql проекта) 
 
 4. Создать и запустить приложение с использование Maven из корневой директории приложения:
 
-а)mvn package;
+а)mvn package
 
-б)java -jar target/ProjectRoI.jar.
+б)java -jar target/ProjectRoI.jar
 
-Альтернативный запуск - mvn spring-boot:run.
+Альтернативный запуск - mvn spring-boot:run 
 
-Приложение запустится с адресом http://localhost:8080.
+Приложение запуститься с адресом http://localhost:8080
+
 -------------------------------------------------------
-Исследуйте Rest APIs для определения CRUD and Find операция(по части названия книги, и поиск по категории).
+
+Исследуйте Rest APIs для определения CrUD and Find операций(по части названия книги, и поиск по категории("Приключения","Фантастика","Ужасы")).
 
 GET /book/get
 
