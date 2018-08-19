@@ -58,7 +58,7 @@ public class BookServiceImpl implements BookService {
         bookDAO.delete(book);
     }
 
-
+    @Transactional(readOnly = true)
     public BookDto getBookById(Integer id) {
         return BOOK_MAPPER.mapEntity(bookDAO.getBookById(id));
     }

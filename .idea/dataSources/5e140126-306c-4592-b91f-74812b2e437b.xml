@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="RoI@localhost">
+<dataSource name="roi@localhost">
   <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
     <root id="1"/>
     <schema id="2" parent="1" name="roi">
@@ -35,63 +35,68 @@
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="15" parent="8" name="PRIMARY">
+    <index id="15" parent="8" name="bookName">
+      <ColNames>bookName
+bookDescription</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="16" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="16" parent="9" name="book_id">
+    <key id="17" parent="8" name="bookName">
+      <ColNames>bookName
+bookDescription</ColNames>
+      <UnderlyingIndexName>bookName</UnderlyingIndexName>
+    </key>
+    <column id="18" parent="9" name="book_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="17" parent="9" name="genre_id">
+    <column id="19" parent="9" name="genre_id">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="18" parent="9" name="book_id">
+    <index id="20" parent="9" name="book_id">
       <ColNames>book_id
 genre_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="19" parent="9" name="genre_id">
+    <index id="21" parent="9" name="genre_id">
       <ColNames>genre_id</ColNames>
     </index>
-    <key id="20" parent="9" name="book_id">
+    <key id="22" parent="9" name="book_id">
       <ColNames>book_id
 genre_id</ColNames>
       <UnderlyingIndexName>book_id</UnderlyingIndexName>
     </key>
-    <foreign-key id="21" parent="9" name="books_genres_ibfk_1">
+    <foreign-key id="23" parent="9" name="books_genres_ibfk_1">
       <ColNames>book_id</ColNames>
       <RefSchemaName>roi</RefSchemaName>
       <RefTableName>books</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="22" parent="9" name="books_genres_ibfk_2">
+    <foreign-key id="24" parent="9" name="books_genres_ibfk_2">
       <ColNames>genre_id</ColNames>
       <RefSchemaName>roi</RefSchemaName>
       <RefTableName>genres</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="23" parent="10" name="id">
+    <column id="25" parent="10" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="24" parent="10" name="genreName">
+    <column id="26" parent="10" name="genreName">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="25" parent="10" name="book_id">
-      <Position>3</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="26" parent="10" name="PRIMARY">
+    <key id="27" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
