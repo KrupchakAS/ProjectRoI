@@ -6,8 +6,11 @@ Spring Boot REST API
 Приложение поддерживает операции CrUD и Find (по части названия книги и поиск по категории).
 
 Требования
+
 Java - 1.8.x
+
 Maven - 3.x.x
+
 Mysql - 5.x.x(или другая база данных)
 
 Шаги по запуску приложения:
@@ -21,16 +24,23 @@ git clone https://github.com/KrupchakAS/ProjectRoI.git
 Открыть src/main/resources/application.properties
 
 Изменить настройки согласно вашей установке запуска сервера базы данных.
+
 а) spring.datasource.username 
+
 б) spring.datasource.password 
+
 (и другие настройки если вы используете иную базу данных)
 
 3. Создание Mysql database.
 
 а) Запустить MySql сервер.
+
 б) Запустить MySQL Command Line Client и ввести ваш пароль от root пользователя для доступа в базе данных
+
 в) create database roi;
+
 г) use roi;
+
 д) source C:\Users\andrey\Desktop\ProjectRoI\src\main\resources\database.sql (ввести путь к локальному расположения файла database.sql проекта) 
 
 4. Создать и запустить приложение с использование Maven из корневой директории приложения:
