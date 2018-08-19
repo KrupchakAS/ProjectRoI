@@ -53,7 +53,7 @@ public class BookServiceImpl implements BookService {
         }
         Book book = bookDAO.getBookById(id);
         if (book == null) {
-            throw new CannotFindObject(String.format("Cannot find book with id \"%d\"!", id));
+            throw new CannotFindObject(String.format("Cannot find book with id \"%d\"", id));
         }
         bookDAO.delete(book);
     }
