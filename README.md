@@ -21,23 +21,23 @@ git clone https://github.com/KrupchakAS/ProjectRoI.git
 Открыть src/main/resources/application.properties
 
 Изменить настройки согласно вашей установке запуска сервера базы данных.
-а)spring.datasource.username 
-б)spring.datasource.password 
+1)spring.datasource.username 
+2)spring.datasource.password 
 (и другие настройки если вы используете иную базу данных)
 
 3. Создание Mysql database.
 
-а)Запустить MySql сервер.
-б)Запустить MySQL Command Line Client и ввести ваш пароль от root пользователя для доступа в базе данных
-в)create database roi;
-г)use roi;
-д)source C:\Users\andrey\Desktop\ProjectRoI\src\main\resources\database.sql (ввести путь к локальному расположения файла database.sql проекта) 
+1)Запустить MySql сервер.
+2)Запустить MySQL Command Line Client и ввести ваш пароль от root пользователя для доступа в базе данных
+3)create database roi;
+4)use roi;
+5)source C:\Users\andrey\Desktop\ProjectRoI\src\main\resources\database.sql (ввести путь к локальному расположения файла database.sql проекта) 
 
 4. Создать и запустить приложение с использование Maven из корневой директории приложения:
 
-а)mvn package
+1)mvn package
 
-б)java -jar target/ProjectRoI.jar
+2)java -jar target/ProjectRoI.jar
 
 Альтернативный запуск - mvn spring-boot:run 
 
