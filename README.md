@@ -45,16 +45,16 @@ git clone https://github.com/KrupchakAS/ProjectRoI.git
 
 -------------------------------------------------------
 
-Исследуйте Rest APIs для определения CrUD and Find операций(по части названия книги, и поиск по категории("Приключения","Фантастика","Ужасы")).
+Исследуйте Rest APIs для определения CrUD and Find операций(по части названия книги(name, description, pages), и поиск по категории("Приключения","Фантастика","Ужасы")).
 
-GET /book/get
+GET /book/get (/book/get?id=1) - поиск по id книги библиотеки
 
-POST /book/create
+POST /book/create (/book/create?name=Head First Java&description=Head First Java - описание&pages=700) - добавление книги в библиотеку
 
-POST /book/update
+POST /book/update (/book/update?id=5&name=Thinking in Java&description=Thinking in Java - описание&pages=800) - обновление свойств книги по id
 
-DELETE /book/delete
+DELETE /book/delete (/book/delete?id=10) - удаление по id книги библиотеки
 
-GET /book/find
+GET /book/find (/book/find) - поиск всех книг библиотеки, (/book/find?name=Одиссея) - поиск по названию или части названия, (/book/find?genre=Приключения) - поиск по жанру(категории) книги.
 
 Возможно тестировать любым REST API client.
