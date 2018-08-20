@@ -55,7 +55,7 @@ git clone https://github.com/KrupchakAS/ProjectRoI.git
 
 -------------------------------------------------------
 
-Исследуйте Rest APIs для определения CrUD and Find операций(по части названия книги(name, description, pages), и поиск по категории(genres="Приключения","Фантастика","Ужасы")).
+Исследуйте Rest APIs для определения CrUD and Find операций(по части названия книги(name, description, pages), и поиск по категории жанры(genres) и полем(name="Приключения","Фантастика","Ужасы")).
 
 GET /book/get  - поиск по id книги библиотеки
 
